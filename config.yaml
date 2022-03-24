@@ -1,0 +1,14 @@
+baseURL: http://localhost/
+languageCode: en-nz
+title: Demo Hugo Site
+
+# Disable taxonomy pages (disables categories and tags folders)
+disableKinds:
+- taxonomy
+- taxonomyTerm
+
+# Required so that Hugo will render markdown to HTML
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
