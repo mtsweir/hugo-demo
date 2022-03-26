@@ -22,7 +22,7 @@ h4 { font-size: $font-size-body-02; }    // [18], 20, 24
 h5 { font-size: $font-size-body-01; }    // [16], 18, 20
 h6 { font-size: $font-size-compact-02; } // [14], 16, 18
 
-@include bp($width-md, 'min') {
+@include bp($width-md, "min") {
 	h1 { font-size: $font-size-body-06; } // 28, [32], 40
 	h2 { font-size: $font-size-body-05; } // 24, [28], 32
 	h3 { font-size: $font-size-body-04; } // 20, [24], 28
@@ -31,7 +31,7 @@ h6 { font-size: $font-size-compact-02; } // [14], 16, 18
 	h6 { font-size: $font-size-body-01; } // 14, [16], 18
 }
 
-@include bp($width-lg, 'min') {
+@include bp($width-lg, "min") {
 	h1 { font-size: $font-size-body-07; } // 28, 32, [40]
 	h2 { font-size: $font-size-body-06; } // 24, 28, [32]
 	h3 { font-size: $font-size-body-05; } // 20, 24, [28]

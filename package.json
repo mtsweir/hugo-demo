@@ -10,7 +10,8 @@
     "render:dev": "exec-bin node_modules/.bin/hugo/hugo server --gc --disableFastRender --renderToDisk --cleanDestinationDir",
     "render:prod": "exec-bin node_modules/.bin/hugo/hugo server --gc --disableFastRender --renderToDisk --cleanDestinationDir --environment production --minify",
     "npm-check": "npm-check -u",
-    "postinstall": "hugo-installer --version otherDependencies.hugo --extended --destination node_modules/.bin/hugo"
+    "postinstall": "hugo-installer --version otherDependencies.hugo --extended --destination node_modules/.bin/hugo",
+    "lint:scss": "stylelint **/*.scss"
   },
   "repository": {
     "type": "git",
@@ -34,5 +35,11 @@
   },
   "otherDependencies": {
     "hugo": "0.95.0"
+  },
+  "devDependencies": {
+    "stylelint": "^14.6.1",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-order": "^5.0.0"
   }
 }

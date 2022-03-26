@@ -70,7 +70,7 @@
 	&:focus,
 	&:active {
 		background: transparent;
-		opacity: 1;
+		opacity: $opacity-100;
 	}
 
 	&:focus {
