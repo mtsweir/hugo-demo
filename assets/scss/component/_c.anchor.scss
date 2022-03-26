@@ -1,0 +1,12 @@
+.pf-link-with-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+
+	svg {
+		flex-shrink: 0;
+		// Icon size relative to font size of parent
+		width: 1em;
+		height: 1em;
+	}
+}

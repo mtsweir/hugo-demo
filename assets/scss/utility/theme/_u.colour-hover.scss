@@ -1,0 +1,17 @@
+@each $colour, $variant in $colour-system-map {
+	.hover-text-#{"" + $colour}:hover {
+		color: $variant;
+	}
+}
+
+@each $colour, $variant in $colour-white-fade-map {
+	.hover-text-white-#{"" + $colour}:hover {
+		color: $variant;
+	}
+}
+
+@each $colour, $variant in $colour-black-fade-map {
+	.hover-text-black-#{"" + $colour}:hover {
+		color: $variant;
+	}
+}

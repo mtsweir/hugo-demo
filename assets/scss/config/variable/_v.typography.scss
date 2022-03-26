@@ -1,0 +1,129 @@
+// Font sizing scale
+
+$font-size-compact-01: 0.75rem;  // 12px
+$font-size-compact-02: 0.875rem; // 14px
+
+$font-size-body-01: 1rem;     // 16px
+$font-size-body-02: 1.125rem; // 18px
+$font-size-body-03: 1.25rem;  // 20px
+$font-size-body-04: 1.5rem;   // 24px
+$font-size-body-05: 1.75rem;  // 28px
+$font-size-body-06: 2rem;     // 32px
+$font-size-body-07: 2.5rem;   // 40px
+
+$font-size-mktg-06: 1.75rem; // 28px
+$font-size-mktg-05: 2rem;    // 32px
+$font-size-mktg-04: 2.5rem;  // 40px
+$font-size-mktg-03: 3rem;    // 48px
+$font-size-mktg-02: 3.5rem;  // 56px
+$font-size-mktg-01: 4rem;    // 64px
+$font-size-mktg-00: 4.5rem;  // 72px
+
+
+// Font weight scale
+
+$font-weight-light:    300;
+$font-weight-normal:   400;
+$font-weight-semibold: 600;
+$font-weight-bold:     700;
+
+
+// Line height
+
+$lh-1:       1;
+$lh-compact: 1.125;
+$lh-small:   1.25;
+$lh-normal:  1.5;
+$lh-medium:  1.625;
+
+
+// Letter-spacing scale
+
+$ls-tighter: -0.05em;
+$ls-tight:   -0.025em;
+$ls-normal:  0;
+$ls-wide:    0.025em;
+$ls-wider:   0.05em;
+
+
+// Body defaults
+
+$body-font: "Nunito Sans", "Helvetica", "Arial", sans-serif;
+$body-font-mono: "SFMono-Regular", "Menlo" , "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
+$body-font-colour: $text-grey-darkest;
+$body-font-size: 16px;
+$body-line-height: $lh-normal;
+$body-link: $text-teal;
+
+
+// Heading defaults
+
+$display-lh: $lh-1;
+$heading-lh: $lh-small;
+$heading-ls: $ls-tight;
+
+
+$compact-font-map: (
+	compact-01: $font-size-compact-01,
+	compact-02: $font-size-compact-02,
+);
+
+
+$body-font-map: (
+	body-01: $font-size-body-01,
+	body-02: $font-size-body-02,
+	body-03: $font-size-body-03,
+	body-04: $font-size-body-04,
+);
+
+
+$heading-font-map: (
+	1: $font-size-body-05,
+	2: $font-size-body-04,
+	3: $font-size-body-03,
+	4: $font-size-body-02,
+	5: $font-size-body-01,
+	6: $font-size-compact-02,
+);
+
+
+$marketing-font-map: (
+	0: $font-size-mktg-03,
+	1: $font-size-mktg-04,
+	2: $font-size-mktg-05,
+	3: $font-size-mktg-06,
+	4: $font-size-body-04,
+	5: $font-size-body-03,
+	6: $font-size-body-01,
+);
+
+
+$letter-spacing-map: (
+	tighter: $ls-tighter,
+	tight: $ls-tight,
+	normal: $ls-normal,
+	wide: $ls-wide,
+	wider: $ls-wider,
+);
+
+
+$line-height-map: (
+	1: $lh-1,
+	sm: $lh-small,
+	normal: $lh-normal,
+	md: $lh-medium,
+);
+
+
+$text-align-map: (
+	center: center,
+	left: left,
+	right: right,
+	justify: justify,
+);
+
+// Font sizes are REM based, with px estimations sizes
+// are based on a 16px root font (the default for most browsers).
+
+// The sizing scale is based on a 1.25 (Major Third) scale,
+// rounded up or down to the nearest quarter (0.25) rem.

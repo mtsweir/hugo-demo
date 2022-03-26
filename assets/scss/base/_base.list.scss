@@ -1,0 +1,30 @@
+ul,
+ol,
+dl {
+	margin-top: 0;
+}
+
+ul,
+ol {
+	padding-left: $spacer-06;
+}
+
+li {
+	margin-bottom: $spacer-02;
+
+	> :first-child {
+		margin-top: 0;
+	}
+
+	> :last-child {
+		margin-bottom: 0;
+	}
+}
+
+dd {
+	margin-left: 0;
+}
+
+p + ul {
+	margin-top: -$spacer-03;
+}

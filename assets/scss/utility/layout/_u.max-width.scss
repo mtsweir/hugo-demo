@@ -1,0 +1,11 @@
+@each $scale, $width in $max-width-map {
+	.max-w-#{$scale} { max-width: $width; }
+}
+
+@each $breakpoint, $variant in $responsive-variants-only {
+	@include breakpoint($breakpoint) {
+		@each $scale, $width in $max-width-map {
+			.max-w-#{$scale}-#{&\@}#{$variant} { max-width: $width; }
+		}
+	}
+}

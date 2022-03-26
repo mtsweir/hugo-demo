@@ -1,0 +1,41 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: $spacer-02;
+	font-weight: $font-weight-semibold;
+	letter-spacing: $ls-tight;
+	line-height: $lh-small;
+}
+
+// Headings scale up at 480px (mobile) & 768px (tablet) breakpoints,
+// h4 - h6 headings scales differ slightly as not requiring all full scale jumps
+// due to their limited usage.
+
+h1 { font-size: $font-size-body-05; }    // [28], 32, 40
+h2 { font-size: $font-size-body-04; }    // [24], 28, 32
+h3 { font-size: $font-size-body-03; }    // [20], 24, 28
+h4 { font-size: $font-size-body-02; }    // [18], 20, 24
+h5 { font-size: $font-size-body-01; }    // [16], 18, 20
+h6 { font-size: $font-size-compact-02; } // [14], 16, 18
+
+@include bp($width-md, 'min') {
+	h1 { font-size: $font-size-body-06; } // 28, [32], 40
+	h2 { font-size: $font-size-body-05; } // 24, [28], 32
+	h3 { font-size: $font-size-body-04; } // 20, [24], 28
+	h4 { font-size: $font-size-body-03; } // 18, [20], 24
+	h5 { font-size: $font-size-body-02; } // 16, [18], 20
+	h6 { font-size: $font-size-body-01; } // 14, [16], 18
+}
+
+@include bp($width-lg, 'min') {
+	h1 { font-size: $font-size-body-07; } // 28, 32, [40]
+	h2 { font-size: $font-size-body-06; } // 24, 28, [32]
+	h3 { font-size: $font-size-body-05; } // 20, 24, [28]
+	h4 { font-size: $font-size-body-04; } // 18, 20, [24]
+	h5 { font-size: $font-size-body-03; } // 16, 18, [20]
+	h6 { font-size: $font-size-body-02; } // 14, 16, [18]
+}

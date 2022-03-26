@@ -1,0 +1,15 @@
+@each $align, $alignment in $text-align-map {
+	.text-#{$align} {
+		text-align: $alignment;
+	}
+}
+
+@each $breakpoint, $variant in $responsive-variants-only {
+	@include breakpoint($breakpoint) {
+		@each $align, $alignment in $text-align-map {
+			.text-#{$align}-#{&\@}#{$variant} {
+				text-align: $alignment;
+			}
+		}
+	}
+}

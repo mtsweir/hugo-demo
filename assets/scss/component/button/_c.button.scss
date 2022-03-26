@@ -1,0 +1,24 @@
+.pf-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: $input-height;
+	padding: 0 $button-x-padding;
+	background-color: transparent;
+	border: $button-border-width solid transparent;
+	font-size: $font-size-compact-02;
+	font-weight: $font-weight-bold;
+	letter-spacing: $ls-wider;
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+	touch-action: manipulation;
+
+	@include transitionCustom($transition-all, $transition-duration-1, $ease-in-out);
+
+	&:active {
+		transition: none;
+	}
+}

@@ -1,0 +1,93 @@
+.pf-scrollnav-container {
+	position: relative;
+
+	&::after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: $grey-lighter;
+		content: "";
+	}
+}
+
+// Carousel wrapper for prefix and carousel
+
+.pf-scrollnav-wrap {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: $spacer-04 0;
+}
+
+// Carousel label prefix
+
+.pf-scrollnav-prefix {
+	margin-right: $spacer-01;
+	padding-right: $spacer-04;
+	border-right: 2px solid $grey-light;
+}
+
+// Carousel main wrapper
+//
+// Add left & right padding to allow for the absolute positioning of the carousel buttons.
+
+.pf-carousel-wrap {
+	flex: 1;
+	padding: 0 $spacer-06;
+}
+
+// Carousel item
+
+.js-scrollnav-cell {
+	margin-right: $spacer-06;
+
+	a {
+		display: block;
+		padding: $spacer-01 0;
+		color: $text-grey-darkest;
+		font-weight: $font-weight-semibold;
+		text-decoration: none;
+		white-space: nowrap;
+
+		&:hover {
+			color: $body-link;
+		}
+	}
+}
+
+// Left & right buttons to control horizontal scrolling
+
+.flickity-button {
+	width: $spacer-06;
+	height: 100%;
+	padding: 0;
+	background: transparent;
+	border-radius: 0;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: transparent;
+		opacity: 1;
+	}
+
+	&:focus {
+		box-shadow: none;
+	}
+
+	&:disabled {
+		opacity: 0;
+	}
+}
+
+// Position buttons outside the carousel container
+
+.flickity-prev-next-button.previous {
+	left: -$spacer-06;
+}
+
+.flickity-prev-next-button.next {
+	right: -$spacer-06;
+}

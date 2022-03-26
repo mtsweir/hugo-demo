@@ -1,0 +1,52 @@
+small {
+	font-size: 90%;
+}
+
+blockquote {
+	margin: 0;
+}
+
+a {
+	color: $body-link;
+	text-decoration: none;
+}
+
+b,
+strong {
+	font-weight: $font-weight-bold;
+}
+
+
+// Horizontal Rule
+
+hr {
+	height: 0;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid $border-grey-light;
+	overflow: hidden;
+
+	@include clearfix;
+}
+
+code,
+kbd,
+pre,
+samp {
+	direction: ltr;
+	font-family: $body-font-mono;
+	line-height: $lh-small;
+	unicode-bidi: bidi-override;
+}
+
+code {
+	direction: ltr;
+	width: fit-content;
+	padding: $spacer-01 / 2 $spacer-01;
+	background-color: $bg-grey-lightest;
+	border-radius: $border-radius-1;
+	color: $text-grey-darker;
+	font-size: $font-size-compact-01;
+	font-weight: $font-weight-normal;
+	word-wrap: break-word;
+}

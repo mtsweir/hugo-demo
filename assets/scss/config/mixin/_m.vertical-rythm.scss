@@ -1,0 +1,7 @@
+@mixin verticalRythm {
+	margin-bottom: $spacer-04;
+
+	@include bp($width-sm, 'min') {
+		margin-bottom: $spacer-05;
+	}
+}

@@ -1,0 +1,127 @@
+//
+// Layout
+//
+
+@use "../variables/" as *;
+
+// Media Query Loop
+
+// This map in the form (breakpoint: variant) is used to iterate over
+// breakpoints and create both responsive & non-responsive classes in one loop:
+//
+// @each $breakpoint, $variant in $responsive-variants-only {
+// 	@include breakpoint($breakpoint) {
+// 		@each $key, $value in $key-map {
+// 			.foo-#{$key}-#{&\@}#{$variant} { display: $value; }
+// 		}
+// 	}
+// }
+//
+
+@mixin breakpoint($breakpoint) {
+	@if $breakpoint == "" {
+		@content;
+	}
+
+	@else {
+		// Retrieves the value from the key
+		$value: map-get($breakpoints, $breakpoint);
+
+		// If the key exists in the map
+		@if $value != null {
+			// Prints a media query based on the value
+			@media (min-width: $value) {
+				@content;
+			}
+		}
+
+		// If the key doesn't exist in the map
+		@else {
+			@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+				+ "Please make sure it is defined in `$breakpoints` map.";
+		}
+	}
+}
+
+
+// Custom Breakpoints
+//
+// This mixin allows you to set: min-width, max-width and (min-max width) breakpoints
+// rules using our core [Breakpoint widths] variables. This is ideal when you are
+// developing and need to set a breakpoint rule for a specific use case.
+//
+// min-width example:
+//
+// @include bp($width-sm, 'min') {
+// 	.foo {
+// 		foo: bar;
+// 	}
+// }
+//
+// @output
+//
+// @media (min-width: 544px) {
+// 	.foo {
+// 		foo: bar;
+// 	}
+// }
+//
+// max-width example:
+//
+// @include bp($width-sm, 'max') {
+// 	.foo {
+// 		foo: bar;
+// 	}
+// }
+//
+// @output
+//
+// @media (max-width: 543px) {
+// 	.foo {
+// 		foo: bar;
+// 	}
+// }
+//
+// min & max width example:
+// @include bp($width-sm, $width-lg) {
+// 	.foo {
+// 		foo: bar;
+// 	}
+// }
+//
+// @output
+// @media (min-width: 544px) and (max-width: 1011px) {
+// 	.foo {
+// 		foo: bar;
+// 	}
+// }
+//
+
+
+@mixin bp($breakpoint, $type) {
+	@if $type == 'min' {
+		// Output media query based on min-width value
+		@media (min-width: $breakpoint) {
+			@content;
+		}
+	}
+
+	@else if $type == 'max' {
+		// Output media query based on max-width value
+		@media (max-width: ($breakpoint - 1)) {
+			@content;
+		}
+	}
+
+	@else if (type-of($type) == number) {
+		// Output media query based on both min-width and max-width
+		@media (min-width: $breakpoint) and (max-width: ($type - 1)) {
+			@content;
+		}
+	}
+
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+			+ "Please make sure it is defined in `$breakpoints` map.";
+	}
+}

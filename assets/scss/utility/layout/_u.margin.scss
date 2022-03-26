@@ -1,0 +1,84 @@
+@each $scale, $size in $spacer-map {
+	// Directional margin
+	.ma-#{$scale} { margin: $size; }
+	.mt-#{$scale} { margin-top: $size; }
+	.mr-#{$scale} { margin-right: $size; }
+	.mb-#{$scale} { margin-bottom: $size; }
+	.ml-#{$scale} { margin-left: $size; }
+
+	// Left & right margin
+	.mx-#{$scale} {
+		margin-left: $size;
+		margin-right: $size;
+	}
+
+	// Top & bottom margin
+	.my-#{$scale} {
+		margin-top: $size;
+		margin-bottom: $size;
+	}
+}
+
+// Auto margin
+.ma-auto { margin: auto; }
+.mt-auto { margin-top: auto; }
+.mr-auto { margin-right: auto; }
+.mb-auto { margin-bottom: auto; }
+.ml-auto { margin-left: auto; }
+
+.mv-auto {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.my-auto {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@each $breakpoint, $variant in $responsive-variants-only {
+	@include breakpoint($breakpoint) {
+		@each $scale, $size in $spacer-map {
+			.ma-#{$scale}-#{&\@}#{$variant} { margin: $size; }
+			.mt-#{$scale}-#{&\@}#{$variant} { margin-top: $size; }
+			.mr-#{$scale}-#{&\@}#{$variant} { margin-right: $size; }
+			.mb-#{$scale}-#{&\@}#{$variant} { margin-bottom: $size; }
+			.ml-#{$scale}-#{&\@}#{$variant} { margin-left: $size; }
+
+			.mx-#{$scale}-#{&\@}#{$variant} {
+				margin-left: $size;
+				margin-right: $size;
+			}
+
+			.my-#{$scale}-#{&\@}#{$variant} {
+				margin-top: $size;
+				margin-bottom: $size;
+			}
+		}
+
+		.ma-auto-#{&\@}#{$variant} { margin: auto; }
+		.mt-auto-#{&\@}#{$variant} { margin-top: auto; }
+		.mr-auto-#{&\@}#{$variant} { margin-right: auto; }
+		.mb-auto-#{&\@}#{$variant} { margin-bottom: auto; }
+		.ml-auto-#{&\@}#{$variant} { margin-left: auto; }
+		.mv-auto-#{&\@}#{$variant} {
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+
+		.my-auto-#{&\@}#{$variant} {
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+
+		.mx-auto-#{&\@}#{$variant} {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

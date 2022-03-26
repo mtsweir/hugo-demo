@@ -1,0 +1,5 @@
+{{ $pluginsPushy := resources.Get "js/plugins/pushy.js" }}
+{{ $global := resources.Get "js/pf-main.js" }}
+{{ $js := slice $pluginsPushy $global | resources.Concat "js/pf-scripts.js" }}
+<script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
+<script type="text/javascript"src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>

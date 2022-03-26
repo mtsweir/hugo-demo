@@ -1,0 +1,53 @@
+.pf-badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: $spacer-09;
+	height: $spacer-09;
+	border-radius: $border-radius-circle;
+	color: $text-white;
+	font-size: $font-size-compact-01;
+	font-weight: $font-weight-bold;
+	letter-spacing: $ls-wider;
+	line-height: $spacer-09;
+	text-transform: uppercase;
+	vertical-align: middle;
+	white-space: nowrap;
+
+	&::before {
+		content: attr(data-label);
+	}
+
+	&.pf-badge-new {
+		background-color: $bg-gold;
+	}
+
+	&.pf-badge-sale {
+		background-color: $bg-red;
+	}
+
+	&.pf-badge-fav {
+		background-color: $bg-pink;
+	}
+
+	&.pf-badge-promo {
+		background-color: $bg-orange-light;
+		color: $text-orange-dark;
+	}
+
+	// Icon only
+
+	&.pf-badge-icon {
+		&::before {
+			content: none;
+		}
+	}
+
+	// Pill shape
+
+	&.pf-badge-secondary {
+		width: auto;
+		padding: 0 $spacer-03;
+		border-radius: $border-radius-pill;
+	}
+}

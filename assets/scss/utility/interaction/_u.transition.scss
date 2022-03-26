@@ -1,0 +1,23 @@
+.transition {
+	@include transition($transition);
+}
+
+.transition-all {
+	@include transition($transition-all);
+}
+
+.transition-color {
+	@include transition($transition-colour);
+}
+
+.transition-opacity {
+	@include transition($transition-opacity);
+}
+
+.transition-shadow {
+	@include transition($transition-shadow);
+}
+
+.transition-transform {
+	@include transition($transition-transform);
+}

@@ -1,0 +1,19 @@
+.group:hover {
+	@each $colour, $variant in $colour-system-map {
+		&.group-hover-text-#{"" + $colour} > * {
+			color: $variant;
+		}
+	}
+
+	@each $colour, $variant in $colour-white-fade-map {
+		&.group-hover-text-white-#{"" + $colour} > * {
+			color: $variant;
+		}
+	}
+
+	@each $colour, $variant in $colour-black-fade-map {
+		&.group-hover-text-black-#{"" + $colour} > * {
+			color: $variant;
+		}
+	}
+}

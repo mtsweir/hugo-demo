@@ -1,0 +1,31 @@
+<header class="pf-site-header bg-white">
+	<nav>
+		<div class="relative flex flex-items-center flex-justify-between py-2 py-4-@md pf-container">
+			<div class="flex">
+				<button class="h-full space-x-3 pa-0 text-grey-darkest text-body-03 pf-btn pf-btn-with-icon pushy-menu-toggle" aria-label="Menu">
+					<svg class="pf-icon" aria-hidden="true">
+						<use xlink:href="#icon-menu"></use>
+					</svg>
+					<span class="hidden block-@sm text-compact-02">Menu</span>
+				</button>
+			</div>
+
+			<div>
+				<a href="#">
+					<span class="sr-only">Go to Pure Fiji homepage</span>
+					{{ $image := resources.Get "/img/logo/pure-fiji-logo.png" }}
+					<img src="{{ $image.RelPermalink }}" width="240" height="132" class="pf-logo w-10 w-11-@md" alt="PureFiji.com">
+				</a>
+			</div>
+
+			<div class="flex">
+				<button class="h-full space-x-3 pa-0 text-grey-darkest text-body-03 pf-btn pf-btn-with-icon" aria-label="Shop">
+					<svg class="pf-icon" aria-hidden="true">
+						<use xlink:href="#icon-cart"></use>
+					</svg>
+					<span class="hidden block-@sm text-compact-02">Shop</span>
+				</button>
+			</div>
+		</div>
+	</nav>
+</header>

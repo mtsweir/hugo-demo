@@ -1,0 +1,11 @@
+@each $elevation, $variant in $elevation-map {
+	.elevation-#{"" + $elevation} {
+		box-shadow: $variant;
+	}
+}
+
+@each $elevation, $variant in $elevation-map {
+	.elevation-hover-#{"" + $elevation}:hover {
+		box-shadow: $variant;
+	}
+}

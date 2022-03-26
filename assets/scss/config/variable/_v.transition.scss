@@ -1,0 +1,23 @@
+$transition: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+$transition-all: all;
+$transition-colour: background-color, border-color, color, fill, stroke;
+$transition-opacity: opacity;
+$transition-shadow: box-shadow;
+$transition-transform: transform;
+$transition-none: none;
+
+
+// Transition duration
+
+$transition-duration-1: 150ms;
+$transition-duration-2: 250ms;
+$transition-duration-3: 350ms;
+$transition-duration-4: 500ms;
+
+
+// Transition timing function
+
+$ease-linear:	linear;
+$ease-in:	    cubic-bezier(0.4, 0, 1, 1);
+$ease-out:	  cubic-bezier(0, 0, 0.2, 1);
+$ease-in-out:	cubic-bezier(0.4, 0, 0.2, 1);

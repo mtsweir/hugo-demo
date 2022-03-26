@@ -1,0 +1,44 @@
+// Link buttons
+//
+// Display button and input (submit/reset) elements as links.
+
+.pf-btn-link {
+	background-color: transparent;
+	border: transparent;
+	color: $text-teal;
+
+	&:hover {
+		background-color: transparent;
+		color: $text-teal-dark;
+		text-decoration: underline;
+	}
+
+	&:disabled {
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: transparent;
+			cursor: default;
+		}
+	}
+}
+
+
+// Buttons with icons
+//
+// Changes the default horizontal Flexbox alignment to place elements
+// either side of the buttons horizontal space.
+//
+// 1. Button icons width and height is relative to the font default font size,
+// this enables the icon to scale in size based on the font size.
+//
+
+.pf-btn-with-icon {
+	justify-content: space-between;
+
+	svg {
+		flex-shrink: 0;
+		width: 1em; // 1
+		height: 1em; // 1
+	}
+}

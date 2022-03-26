@@ -1,0 +1,39 @@
+@mixin visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0); // legacy support for older versions of IE
+	clip-path: inset(50%);
+	width: 1px;
+	height: 1px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+
+// Undo visually-hidden, making an element visible to sighted users as well as screen readers.
+
+@mixin not-visually-hidden {
+	position: static;
+	clip: auto; // legacy support for older versions of IE
+	clip-path: none;
+	width: auto;
+	height: auto;
+	overflow: visible;
+	white-space: normal;
+}
+
+
+// Use to only display content when it's focused, e.g "Skip to main content" links.
+// See: https://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+
+@mixin visually-hidden-focusable {
+	&:not(:focus) {
+		@include visually-hidden;
+	}
+}
+
+// Hide content visually while keeping it accessible to assistive technologies.
+// See: https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/
+// See: https://hugogiraudel.com/2016/10/13/css-hide-and-seek/

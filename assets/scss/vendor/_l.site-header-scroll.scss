@@ -1,0 +1,42 @@
+.js-site-header-scroll {
+	@include transitionCustom($transition-all, $transition-duration-3, $ease-in-out);
+}
+
+.js-scroll-down:not(.pushy-open-left) {
+	.js-site-header-scroll {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: $z-top;
+		transform: translateY(-100%);
+	}
+
+	.js-site-header-placeholder {
+		display: block;
+	}
+}
+
+.js-scroll-up:not(.pushy-open-left) {
+	.js-site-header-scroll {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: $z-top;
+		transform: none;
+	}
+
+	.js-site-header-placeholder {
+		display: block;
+	}
+}
+
+.pf-site-header {
+	height: 105px;
+}
+
+.js-site-header-placeholder {
+	display: none;
+	height: 120px;
+}

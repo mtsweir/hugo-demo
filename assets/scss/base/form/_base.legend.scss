@@ -1,0 +1,11 @@
+legend {
+	margin-bottom: $spacer-02;
+	font-weight: $font-weight-bold;
+	line-height: $lh-small;
+
+	> :last-child {
+		margin: 0;
+		font-size: inherit;
+		font-weight: inherit;
+	}
+}

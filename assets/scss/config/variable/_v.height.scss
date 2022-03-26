@@ -1,0 +1,47 @@
+/* stylelint-disable length-zero-no-unit */
+$height-spacer-map: (
+	0: 0px,
+	1: $spacer-01,
+	2: $spacer-02,
+	3: $spacer-03,
+	4: $spacer-04,
+	5: $spacer-05,
+	6: $spacer-06,
+	7: $spacer-07,
+	8: $spacer-08,
+	9: $spacer-09,
+	10: $spacer-10,
+	11: $spacer-11,
+	12: $spacer-12,
+	13: $spacer-13,
+	14: $spacer-14,
+	15: $spacer-15,
+	one-quarter: 25%,
+	one-third: 33.33333%,
+	one-half: 50%,
+	two-thirds: 66.66667%,
+	three-quarters: 75%,
+	auto: auto,
+	full: 100%,
+	screen: 100vh,
+);
+
+$min-height-map: (
+	0: 0px,
+	full: 100%,
+	screen: 100vh,
+);
+
+/* stylelint-enable length-zero-no-unit */
+
+$screen-height-map: (
+	10: 10vh,
+	15: 15vh,
+	20: 20vh,
+);
+
+// Example:
+//
+// .foo {
+// 	height: map-get($height-spacer-map, 11);
+// }

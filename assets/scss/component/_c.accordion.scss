@@ -1,0 +1,117 @@
+.pf-accordion {
+	border-top: 1px solid $grey-light;
+	overflow: hidden;
+
+	// Accordion item
+
+	&-item {
+		width: 100%;
+		border-bottom: 1px solid $grey-light;
+		overflow: hidden;
+
+		// Position the icon within the label
+
+		label {
+			position: relative;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		input[type="checkbox"] {
+			@include visually-hidden;
+
+			// Add visual support for keyboard focus
+
+			&:focus {
+
+				/* stylelint-disable max-nesting-depth */
+				+ label {
+					color: $body-link;
+					text-decoration: underline;
+				}
+
+				/* stylelint-enable max-nesting-depth */
+			}
+
+			&:checked {
+
+				/* stylelint-disable max-nesting-depth */
+				+ label {
+
+					// Reset vertical line to show the "opened" state
+
+					> .pf-accordion-icon {
+						&::after {
+							transform: rotate(90deg);
+
+							@include transitionCustom(transform, $transition-duration-2, $ease-linear);
+						}
+					}
+				}
+
+				~ .pf-accordion-content {
+					max-height: 100vh;
+				}
+
+				/* stylelint-enable max-nesting-depth */
+			}
+		}
+
+		label {
+			display: block;
+			padding: $spacer-04 $spacer-07 $spacer-04 0;
+			cursor: pointer;
+		}
+	}
+
+	// Accordion content
+
+	&-content {
+		max-height: 0;
+		padding-right: $spacer-07;
+		overflow: hidden;
+
+		@include transition($transition-all);
+	}
+
+	// Accordion icon
+
+	&-icon {
+		position: absolute;
+		top: 50%;
+		right: $spacer-02;
+		width: $spacer-03;
+		height: $spacer-03;
+		transform: translateY(-50%);
+
+		&::before,
+		&::after {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 10%;
+			height: 10%;
+			margin: auto;
+			background-color: $bg-grey-darkest;
+			border: 1px solid transparent;
+			content: "";
+
+			@include transitionCustom(transform, $transition-duration-2, $ease-in-out);
+		}
+
+		&::after {
+			height: 100%;
+		}
+
+		&::before {
+			width: 100%;
+		}
+	}
+}
+
+// CSS Accordion
+// https://codepen.io/raubaca/pen/PZzpVe

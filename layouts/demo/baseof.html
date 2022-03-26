@@ -4,9 +4,12 @@
 	{{ partial "head" . }}
 </head>
 <body>
+	{{ partial "site-icons" . }}
+
 	<main>
 		{{ block "main" . }}{{ end }}
 	</main>
-	{{ partial "scriptFooter" . }}
+
+	{{ partial "site-footer-script" . }}
 </body>
 </html>

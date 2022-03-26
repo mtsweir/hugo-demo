@@ -1,0 +1,15 @@
+@each $scale, $size in $min-height-map {
+	.min-h-#{$scale} {
+		min-height: $size;
+	}
+}
+
+@each $breakpoint, $variant in $responsive-variants-only {
+	@include breakpoint($breakpoint) {
+		@each $scale, $size in $min-height-map {
+			.min-h-#{$scale}-#{&\@}#{$variant} {
+				min-height: $size;
+			}
+		}
+	}
+}

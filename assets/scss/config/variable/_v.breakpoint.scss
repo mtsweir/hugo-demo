@@ -1,0 +1,34 @@
+// Breakpoint scale
+
+$width-sm: 544px;
+$width-md: 768px;
+$width-lg: 1012px;
+$width-xl: 1280px;
+
+
+// Breakpoint map
+
+$breakpoints: (
+	sm: $width-sm, // Small screen / phone
+	md: $width-md, // Medium screen / tablet
+	lg: $width-lg, // Large screen / desktop
+	xl: $width-xl, // Extra large screen / wide desktop
+);
+
+
+// Responsive breakpoint variant map
+
+$responsive-variants: (
+	"": "",
+	sm: "-sm",
+	md: "-md",
+	lg: "-lg",
+	xl: "-xl",
+);
+
+$responsive-variants-only: (
+	sm: "sm",
+	md: "md",
+	lg: "lg",
+	xl: "xl",
+);

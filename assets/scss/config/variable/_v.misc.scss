@@ -1,0 +1,78 @@
+// Border
+
+$border-width: 1px;
+$border-color: $border-grey;
+$border-style: solid;
+$border: $border-width $border-style $border-color;
+
+$border-radius-1: 4px;
+$border-radius-2: 8px;
+$border-radius-circle: 50%;
+$border-radius-pill: 99em;
+
+
+// Box shadow
+
+//$elevation-100: rgba($grey-700, 25%) 0 1px 1px, rgba($grey-700, 13%) 0 0 1px 1px;
+$elevation-100: rgba($grey-700, 25%) 0 1px 1px, rgba($grey-700, 31%) 0 0 1px 0;
+$elevation-200: rgba($grey-700, 25%) 0 4px 8px -2px, rgba($grey-700, 31%) 0 0 1px;
+$elevation-300: rgba($grey-700, 25%) 0 8px 16px -4px, rgba($grey-700, 31%) 0 0 1px;
+$elevation-400: rgba($grey-700, 25%) 0 12px 24px -6px, rgba($grey-700, 31%) 0 0 1px;
+$elevation-500: rgba($grey-700, 25%) 0 20px 32px -8px, rgba($grey-700, 31%) 0 0 1px;
+
+$elevation-map: (
+	100: $elevation-100,
+	200: $elevation-200,
+	300: $elevation-300,
+	400: $elevation-400,
+	500: $elevation-500,
+);
+
+
+// Opacity
+
+$opacity-15: 0.15;
+$opacity-30: 0.3;
+$opacity-50: 0.5;
+$opacity-70: 0.7;
+$opacity-85: 0.85;
+$opacity-100: 1;
+
+
+// Aspect ratios
+
+$aspect-ratios: (
+	"1x1": calc((1 / 1) * 100%),   // 100%
+	"4x3": calc((3 / 4) * 100%),   // 75%
+	"3x2": calc((2 / 3) * 100%),   // 66.67%
+	"16x9": calc((9 / 16) * 100%), // 56.25%
+	"2x1": calc((1 / 2) * 100%),   // 50%
+);
+
+
+// Z-index
+
+$z-0: 0;
+$z-1: 100;
+$z-top: 500;
+$z-menu-overlay: 1000;
+$z-menu-nav: 9999;
+
+$z-level-map: (
+	$z-0: 0,
+	$z-1: 1,
+	$z-top: 50,
+	"auto": auto,
+);
+
+
+// Display map variants
+//
+// Used to show/hide elements, sections, content etc at breakpoints.
+
+$display-variants: (
+	hidden: none,
+	block: block,
+	inline: inline,
+	inline-block: inline-block,
+);

@@ -1,0 +1,85 @@
+@each $background, $variant in $colour-system-map {
+	// Output background colour variations
+	.bg-#{"" + $background} {
+		background-color: $variant;
+	}
+}
+
+@each $background, $variant in $colour-black-fade-map {
+	// Output background colour variations
+	.bg-black-#{"" + $background} {
+		background-color: $variant;
+	}
+}
+
+@each $background, $variant in $colour-white-fade-map {
+	// Output background colour variations
+	.bg-white-#{"" + $background} {
+		background-color: $variant;
+	}
+}
+
+@each $colour, $variant in $colour-system-map {
+	.hover-bg-#{"" + $colour}:hover {
+		background-color: #{$variant};
+	}
+}
+
+.hover-bg-transparent:hover {
+	background-color: transparent;
+}
+
+.bg-transparent {
+	background-color: transparent;
+}
+
+
+// Image
+
+.bg-center {
+	background-position: center;
+}
+
+.bg-repeat {
+	background-repeat: repeat;
+}
+
+.bg-no-repeat {
+	background-repeat: no-repeat;
+}
+
+.bg-repeat-x {
+	background-repeat: repeat-x;
+}
+
+.bg-repeat-y {
+	background-repeat: repeat-y;
+}
+
+.bg-auto {
+	background-size: auto;
+}
+
+.bg-cover {
+	background-size: cover;
+}
+
+.bg-contain {
+	background-size: contain;
+}
+
+.bg-none {
+	background-image: none;
+}
+
+.bg-fixed {
+	background-attachment: fixed;
+}
+
+.bg-local {
+	background-attachment: local;
+}
+
+.bg-scroll {
+	background-attachment: scroll;
+}

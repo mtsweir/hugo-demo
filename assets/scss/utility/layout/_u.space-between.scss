@@ -1,0 +1,53 @@
+$space-x-reverse: 0;
+
+.space-x-0 > * + * {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+@each $scale, $size in $space-between-map {
+	.space-x-#{$scale} > * + * {
+		margin-left: calc(#{$size} * calc(1 - #{$space-x-reverse}));
+		margin-right: calc(#{$size} * #{$space-x-reverse});
+	}
+}
+
+.space-y-0 > * + * {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+@each $scale, $size in $space-between-map {
+	.space-y-#{$scale} > * + * {
+		margin-top: calc(#{$size} * calc(1 - #{$space-x-reverse}));
+		margin-bottom: calc(#{$size} * #{$space-x-reverse});
+	}
+}
+
+@each $breakpoint, $variant in $responsive-variants-only {
+	@include breakpoint($breakpoint) {
+		.space-x-0-#{&\@}#{$variant} > * + * {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		@each $scale, $size in $space-between-map {
+			.space-x-#{$scale}-#{&\@}#{$variant} > * + * {
+				margin-left: calc(#{$size} * calc(1 - #{$space-x-reverse}));
+				margin-right: calc(#{$size} * #{$space-x-reverse});
+			}
+		}
+
+		.space-y-0-#{&\@}#{$variant} > * + * {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		@each $scale, $size in $space-between-map {
+			.space-y-#{$scale}-#{&\@}#{$variant} > * + * {
+				margin-top: calc(#{$size} * calc(1 - #{$space-x-reverse}));
+				margin-bottom: calc(#{$size} * #{$space-x-reverse});
+			}
+		}
+	}
+}

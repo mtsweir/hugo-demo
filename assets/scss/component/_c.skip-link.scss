@@ -1,0 +1,22 @@
+.pf-skip-link {
+	z-index: $z-top;
+	background-color: $teal-light;
+	color: $text-grey-darkest;
+	font-size: $font-size-compact-02;
+
+	@include visually-hidden;
+
+	&:active,
+	&:focus {
+		padding: $spacer-02 $spacer-04;
+		box-shadow: inset 0 0 0 1px $teal;
+		text-decoration: underline;
+
+		@include not-visually-hidden;
+
+		/* stylelint-disable order/properties-order */
+		position: absolute; // Override not-visually-hidden mixin for position
+
+		/* stylelint-enable order/properties-order */
+	}
+}

@@ -1,0 +1,42 @@
+.static { position: static; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+
+.sticky {
+	position: sticky;
+	position: -webkit-sticky; // stylelint-disable-line
+}
+
+.top-auto { top: auto; }
+.bottom-auto { bottom: auto; }
+.left-auto { left: auto; }
+.right-auto { right: auto; }
+
+.top-0 { top: 0; }
+.bottom-0 { bottom: 0; }
+.left-0 { left: 0; }
+.right-0 { right: 0; }
+
+@each $breakpoint, $variant in $responsive-variants-only {
+	@include breakpoint($breakpoint) {
+		.static-#{&\@}#{$variant} { position: static; }
+		.relative-#{&\@}#{$variant} { position: relative; }
+		.absolute-#{&\@}#{$variant} { position: absolute; }
+		.fixed-#{&\@}#{$variant} { position: fixed; }
+		.sticky-#{&\@}#{$variant} {
+			position: sticky;
+			position: -webkit-sticky; // stylelint-disable-line
+		}
+
+		.top-auto-#{&\@}#{$variant} { top: auto; }
+		.bottom-auto-#{&\@}#{$variant} { bottom: auto; }
+		.left-auto-#{&\@}#{$variant} { left: auto; }
+		.right-auto-#{&\@}#{$variant} { right: auto; }
+
+		.top-0-#{&\@}#{$variant} { top: 0; }
+		.bottom-0-#{&\@}#{$variant} { bottom: 0; }
+		.left-0-#{&\@}#{$variant} { left: 0; }
+		.right-0-#{&\@}#{$variant} { right: 0; }
+	}
+}

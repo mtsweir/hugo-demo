@@ -1,0 +1,32 @@
+@include input-text {
+	width: 100%;
+	min-height: $input-height;
+	padding: 0 $input-x-padding;
+	background-color: $input-background-color;
+	border: $input-border-width solid $input-border-color;
+	border-radius: 0;
+	box-shadow: none;
+	color: $input-text-color;
+	font-size: $font-size-body-01;
+	font-weight: $font-weight-normal;
+	vertical-align: middle;
+	appearance: none;
+
+	@include transitionCustom($transition-colour, $transition-duration-1, $ease-in-out);
+
+	&:not(:disabled):hover {
+		border-color: $input-border-color-hover;
+	}
+
+	&:not(:disabled):focus {
+		border-color: $input-border-color-focus;
+
+		@include focusRing;
+	}
+
+	// Disabled appearance
+
+	&:disabled {
+		@include inputDisabled;
+	}
+}

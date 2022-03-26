@@ -1,0 +1,87 @@
+@mixin input-text {
+	[type="text"],
+	[type="password"],
+	[type="email"],
+	[type="number"],
+	[type="url"],
+	[type="date"],
+	[type="datetime-local"],
+	[type="month"],
+	[type="week"],
+	[type="time"],
+	[type="search"],
+	[type="tel"],
+	select,
+	select[multiple],
+	textarea {
+		@content;
+	}
+}
+
+@mixin focusRing {
+	box-shadow: inset 0 0 0 1px $input-border-color-focus-ring;
+}
+
+@mixin focusRingCheck {
+	box-shadow: inset 0 0 0 1px $input-border-color-focus-check;
+}
+
+@mixin focusRingError {
+	box-shadow: inset 0 0 0 1px !important;
+}
+
+// Used for check and radio form elements
+
+@mixin checkRing($color) {
+	box-shadow: inset 0 0 0 $check-border-width $color;
+}
+
+// Reset form interaction states
+//
+// Used when you need to create a custom form input.
+// %input-static-focus resets the default hover/focus and colour states,
+// by using the inherit attribute.
+//
+// Example:
+//
+// .foo {
+// 	@include inputStatic('search') {
+// 			color: red;
+// 	}
+// }
+//
+// Output:
+//
+// .foo[type=search]:not([disabled]):hover,
+// .foo[type=search]:not([disabled]):focus {
+//   background-color: inherit;
+//   border-color: transparent;
+//   box-shadow: inherit;
+//   color: inherit;
+// }
+
+%input-static-focus {
+	background-color: inherit;
+	border-color: transparent;
+	box-shadow: inherit;
+	color: inherit;
+}
+
+@mixin inputStatic($type) {
+	$selector: '';
+	&#{$selector}[type='#{$type}'] {
+		@content;
+
+		&:not(:disabled):hover,
+		&:not(:disabled):focus {
+			@extend %input-static-focus;
+		}
+	}
+}
+
+// Disabled appearance
+
+@mixin inputDisabled {
+	opacity: $opacity-50;
+	cursor: default;
+}

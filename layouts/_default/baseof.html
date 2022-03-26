@@ -4,15 +4,19 @@
 	{{ partial "head" . }}
 </head>
 <body>
-	<header>
-		{{ partial "header" . }}
-	</header>
-	<main>
-		{{ block "main" . }}{{ end }}
-	</main>
-	<footer>
-		{{ partial "footer" . }}
-	</footer>
-	{{ partial "scriptFooter" . }}
+{{ partial "site-icons" . }}
+<header>
+	{{ partial "site-offcanvas-menu" . }}
+	{{ partial "site-header" . }}
+</header>
+
+<main>
+	{{ block "main" . }}{{ end }}
+</main>
+
+<footer>
+	{{ partial "site-footer" . }}
+</footer>
+{{ partial "site-footer-script" . }}
 </body>
 </html>

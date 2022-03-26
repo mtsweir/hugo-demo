@@ -1,0 +1,20 @@
+@each $display, $type in $display-variants {
+	.#{$display} {
+		display: $type;
+	}
+}
+
+@each $breakpoint, $variant in $responsive-variants-only {
+	@include breakpoint($breakpoint) {
+		@each $display, $type in $display-variants {
+			.#{$display}-#{&\@}#{$variant} {
+				display: $type;
+			}
+		}
+	}
+}
+
+// Utilities for controlling the visibility of an element.
+
+.invisible { visibility: hidden; }
+.visible { visibility: visible; }

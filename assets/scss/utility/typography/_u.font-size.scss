@@ -1,0 +1,89 @@
+@each $scale, $size in $compact-font-map {
+	.text-#{$scale} {
+		font-size: $size;
+		line-height: $lh-small;
+	}
+}
+
+@each $scale, $size in $body-font-map {
+	.text-#{$scale} {
+		font-size: $size;
+		line-height: $lh-normal;
+	}
+}
+
+@each $scale, $size in $marketing-font-map {
+	.text-#{$scale} {
+		font-size: $size;
+
+		@include typeMarketing;
+	}
+}
+
+@each $breakpoint, $variant in $responsive-variants-only {
+	@include breakpoint($breakpoint) {
+		@each $scale, $size in $compact-font-map {
+			.text-#{$scale}-#{&\@}#{$variant} {
+				font-size: $size;
+				line-height: $lh-medium;
+			}
+		}
+
+		@each $scale, $size in $body-font-map {
+			.text-#{$scale}-#{&\@}#{$variant} {
+				font-size: $size;
+				line-height: $lh-normal;
+			}
+		}
+	}
+}
+
+
+// Heading utilities
+
+@each $type, $size in $heading-font-map {
+	.h#{$type} {
+		font-size: $size;
+
+		@include typeHeading;
+	}
+}
+
+@include bp($width-md, 'min') {
+	.h1 { font-size: $font-size-body-06; }
+	.h2 { font-size: $font-size-body-05; }
+	.h3 { font-size: $font-size-body-04; }
+	.h4 { font-size: $font-size-body-03; }
+	.h5 { font-size: $font-size-body-02; }
+	.h6 { font-size: $font-size-body-01; }
+}
+
+@include bp($width-lg, 'min') {
+	.h1 { font-size: $font-size-body-07; }
+	.h2 { font-size: $font-size-body-06; }
+	.h3 { font-size: $font-size-body-05; }
+	.h4 { font-size: $font-size-body-04; }
+	.h5 { font-size: $font-size-body-03; }
+	.h6 { font-size: $font-size-body-02; }
+}
+
+
+// Marketing typography
+
+@each $scale, $size in $marketing-font-map {
+	.h#{$scale}-mktg {
+		font-size: $size;
+
+		@include typeMarketing;
+	}
+}
+
+@include bp($width-md, 'min') {
+	.h0-mktg { font-size: $font-size-mktg-00; }
+	.h1-mktg { font-size: $font-size-mktg-02; }
+	.h2-mktg { font-size: $font-size-mktg-03; }
+	.h3-mktg { font-size: $font-size-mktg-04; }
+	.h4-mktg { font-size: $font-size-mktg-06; }
+	.h5-mktg { font-size: $font-size-body-04; }
+	.h6-mktg { font-size: $font-size-body-03; }
+}

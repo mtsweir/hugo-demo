@@ -1,0 +1,34 @@
+.pf-btn-teal {
+	@include button-theme($teal, $teal-dark);
+}
+
+.pf-btn-pink {
+	@include button-theme($pink, $pink-dark);
+}
+
+.pf-btn-orange {
+	@include button-theme($orange, $orange-dark);
+}
+
+.pf-btn-black {
+	@include button-theme($grey-600, $grey-700);
+}
+
+
+// Outline
+
+.pf-btn-outline-teal {
+	@include button-theme-inverse($teal, $teal-dark);
+}
+
+.pf-btn-outline-pink {
+	@include button-theme-inverse($pink, $pink-dark);
+}
+
+.pf-btn-outline-orange {
+	@include button-theme-inverse($orange, $orange-dark);
+}
+
+.pf-btn-outline-black {
+	@include button-theme-inverse($grey-600, $grey-700);
+}

@@ -1,0 +1,21 @@
+.table-compact {
+	th,
+	td {
+		padding: $spacer-02 $spacer-04;
+	}
+}
+
+.table-tall {
+	th,
+	td {
+		padding: $spacer-04;
+	}
+}
+
+.table-striped {
+	tbody {
+		tr:nth-child(2n) {
+			background-color: $bg-grey-lightest;
+		}
+	}
+}

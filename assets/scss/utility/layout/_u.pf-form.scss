@@ -1,0 +1,26 @@
+.pf-form-group {
+	margin-bottom: $spacer-06;
+
+	> label {
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	// Reduce vertical space when hint is placed after
+
+	input + .pf-form-hint {
+		margin-top: $spacer-02;
+	}
+}
+
+// Reduce vertical space between label and hint text when stacked
+
+legend + .pf-form-hint,
+.pf-form-label + .pf-form-hint {
+	margin-top: -$spacer-01;
+}
+
+.pf-form-actions {
+	margin-top: $spacer-04;
+}

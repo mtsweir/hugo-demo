@@ -1,0 +1,22 @@
+.pseudo-bg {
+	position: relative;
+	
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: $z-1;
+		width: 100%;
+		height: 100%;
+		content: "";
+	}
+}
+
+@each $colour, $variant in $colour-black-fade-map {
+	.pseudo-bg-opacity-#{"" + $colour}::before {
+		background-color: #{$variant};
+	}
+}
+
+// Requires .pseudo-bg together width a variant background opacity from
+// .pseudo-bg-opacity-[vairant] to create a transparent overlay over an element.

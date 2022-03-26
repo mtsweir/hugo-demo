@@ -1,0 +1,47 @@
+.border {
+	border: $border;
+}
+
+.border-top {
+	border-top: $border;
+}
+
+.border-right {
+	border-right: $border;
+}
+
+.border-bottom {
+	border-bottom: $border;
+}
+
+.border-left {
+	border-left: $border;
+}
+
+.border-none {
+	border: 0;
+}
+
+.border-x {
+	border-left: $border;
+	border-right: $border;
+}
+
+.border-y {
+	border-top: $border;
+	border-bottom: $border;
+}
+
+
+// Border colours
+
+@each $border, $variant in $colour-system-map {
+	// Output border colour variations
+	.border-#{"" + $border} {
+		border-color: $variant;
+	}
+}
+
+.border-transparent {
+	border-color: transparent;
+}

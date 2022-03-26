@@ -1,0 +1,3 @@
+.pseudo-data-before::before {
+	content: attr(data-label);
+}

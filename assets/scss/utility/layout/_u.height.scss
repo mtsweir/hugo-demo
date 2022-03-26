@@ -1,0 +1,25 @@
+@each $scale, $size in $height-spacer-map {
+	.h-#{$scale} {
+		height: $size;
+	}
+}
+
+@each $breakpoint, $variant in $responsive-variants-only {
+	@include breakpoint($breakpoint) {
+		@each $scale, $size in $height-spacer-map {
+			.h-#{$scale}-#{&\@}#{$variant} {
+				height: $size;
+			}
+		}
+	}
+}
+
+@each $breakpoint, $variant in $responsive-variants {
+	@include breakpoint($breakpoint) {
+		@each $scale, $size in $screen-height-map {
+			.h-screen-#{$scale}-#{&\@}#{$variant} {
+				height: $size;
+			}
+		}
+	}
+}

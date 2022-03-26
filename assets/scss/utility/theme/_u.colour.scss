@@ -1,0 +1,23 @@
+@each $colour, $variant in $colour-system-map {
+	.text-#{"" + $colour} {
+		color: $variant;
+	}
+}
+
+@each $colour, $variant in $colour-black-fade-map {
+	// Black text opacity
+	.text-black-#{"" + $colour} {
+		color: $variant;
+	}
+}
+
+@each $colour, $variant in $colour-white-fade-map {
+	// White text opacity
+	.text-white-#{"" + $colour} {
+		color: $variant;
+	}
+}
+
+.text-current { color: currentColor; }
+.text-inherit { color: inherit; }
+.text-transparent { color: transparent; }

@@ -1,0 +1,42 @@
+@each $scale, $size in $spacer-map {
+	// Directional padding
+	.pa-#{$scale} { padding: $size; }
+	.pt-#{$scale} { padding-top: $size; }
+	.pr-#{$scale} { padding-right: $size; }
+	.pb-#{$scale} { padding-bottom: $size; }
+	.pl-#{$scale} { padding-left: $size; }
+
+	// Horizontal padding
+	.px-#{$scale} {
+		padding-left: $size;
+		padding-right: $size;
+	}
+
+	// Vertical padding
+	.py-#{$scale} {
+		padding-top: $size;
+		padding-bottom: $size;
+	}
+}
+
+@each $breakpoint, $variant in $responsive-variants-only {
+	@include breakpoint($breakpoint) {
+		@each $scale, $size in $spacer-map {
+			.pa-#{$scale}-#{&\@}#{$variant} { padding: $size; }
+			.pt-#{$scale}-#{&\@}#{$variant} { padding-top: $size; }
+			.pr-#{$scale}-#{&\@}#{$variant} { padding-right: $size; }
+			.pb-#{$scale}-#{&\@}#{$variant} { padding-bottom: $size; }
+			.pl-#{$scale}-#{&\@}#{$variant} { padding-left: $size; }
+
+			.px-#{$scale}-#{&\@}#{$variant} {
+				padding-left: $size;
+				padding-right: $size;
+			}
+
+			.py-#{$scale}-#{&\@}#{$variant} {
+				padding-top: $size;
+				padding-bottom: $size;
+			}
+		}
+	}
+}

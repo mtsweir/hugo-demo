@@ -1,0 +1,15 @@
+@each $scale, $size in $line-height-map {
+	.lh-#{$scale} {
+		line-height: $size;
+	}
+}
+
+@each $breakpoint, $variant in $responsive-variants-only {
+	@include breakpoint($breakpoint) {
+		@each $scale, $size in $line-height-map {
+			.lh-#{$scale}-#{&\@}#{$variant} {
+				line-height: $size;
+			}
+		}
+	}
+}

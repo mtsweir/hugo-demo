@@ -1,0 +1,11 @@
+@mixin typeHeading {
+	font-weight: $font-weight-semibold;
+	letter-spacing: $ls-tight;
+	line-height: $lh-small;
+}
+
+@mixin typeMarketing {
+	font-weight: $font-weight-semibold;
+	letter-spacing: $heading-ls;
+	line-height: $display-lh;
+}

@@ -1,0 +1,38 @@
+.pf-breadcrumb {
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0;
+	padding: 0;
+	font-size: $font-size-compact-01;
+	list-style: none;
+
+	> li {
+		position: relative;
+		margin-bottom: 0;
+		color: $grey-600;
+		font-weight: $font-weight-normal;
+		letter-spacing: $ls-wider;
+		line-height: $lh-small;
+		text-transform: uppercase;
+
+		> a {
+			color: $grey-600;
+
+			&:hover {
+				color: $grey-700;
+				text-decoration: underline;
+			}
+		}
+
+		&:not(:first-child) {
+			margin-left: $spacer-02;
+			padding-left: $spacer-03;
+
+			&::before {
+				position: absolute;
+				left: 0;
+				content: "/";
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.pf-form-label {
+	display: block;
+	margin-bottom: $spacer-02;
+	font-weight: $font-weight-bold;
+	line-height: $lh-small;
+}
+
+// Hide label text visually but make accessible to screenreaders,
+// use .pf-form-label-placeholder to wrap the label text.
+//
+// Example:
+//
+// <label>
+// 	<span class="pf-form-label-placeholder">Label text</span>
+// 	<input type="text" name="">
+// </label>
+//
+
+.pf-form-label-placeholder {
+	@include visually-hidden;
+}

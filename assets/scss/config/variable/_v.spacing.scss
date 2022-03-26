@@ -1,0 +1,76 @@
+// Spacing scale
+
+$spacer-00: 0;
+$spacer-01: 4px;   // 0.25x
+$spacer-02: 8px;   // 0.5x
+$spacer-03: 12px;  // 0.75x
+$spacer-04: 16px;  // 1x
+$spacer-05: 20px;  // 1.25x
+$spacer-06: 24px;  // 1.5x
+$spacer-07: 32px;  // 2x
+$spacer-08: 40px;  // 2.5x
+$spacer-09: 48px;  // 3x
+$spacer-10: 64px;  // 4x
+$spacer-11: 96px;  // 6x
+$spacer-12: 160px; // 10x
+
+// Extended spacing scale
+// These are primarily useful for achieving bigger spacing with steps in increments of 10x.
+
+$spacer-13: 320px; // 20x
+$spacer-14: 480px; // 30x
+$spacer-15: 640px; // 40x
+
+
+// Spacer values
+
+$spacers: (
+	$spacer-00,
+	$spacer-01,
+	$spacer-02,
+	$spacer-03,
+	$spacer-04,
+	$spacer-05,
+	$spacer-06,
+	$spacer-07,
+	$spacer-08,
+	$spacer-09,
+	$spacer-10,
+	$spacer-11,
+	$spacer-12,
+);
+
+
+// And the map of spacers, for easier looping:
+// @each $scale, $length in $spacer-map { ... }
+
+$spacer-map: (
+	0: $spacer-00,
+	1: $spacer-01,
+	2: $spacer-02,
+	3: $spacer-03,
+	4: $spacer-04,
+	5: $spacer-05,
+	6: $spacer-06,
+	7: $spacer-07,
+	8: $spacer-08,
+	9: $spacer-09,
+	10: $spacer-10,
+	11: $spacer-11,
+	12: $spacer-12,
+);
+
+$space-between-map: (
+	1: $spacer-01,
+	2: $spacer-02,
+	3: $spacer-03,
+	4: $spacer-04,
+	5: $spacer-05,
+	6: $spacer-06,
+	7: $spacer-07,
+	8: $spacer-08,
+	9: $spacer-09,
+	10: $spacer-10,
+	11: $spacer-11,
+	12: $spacer-12,
+);

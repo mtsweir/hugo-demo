@@ -1,0 +1,174 @@
+// Grey
+
+$grey-lightest: $grey-100;
+$grey-lighter:  $grey-200;
+$grey-light:    $grey-300;
+$grey:          $grey-400;
+$grey-dark:     $grey-500;
+$grey-darker:   $grey-600;
+$grey-darkest:  $grey-700;
+
+
+// Background colours
+
+$bg-gold:       $gold;
+$bg-gold-light: $gold-light;
+$bg-gold-dark:  $gold-dark;
+
+$bg-orange:       $orange;
+$bg-orange-dark:  $orange-dark;
+$bg-orange-light: $orange-light;
+
+$bg-pink:       $pink;
+$bg-pink-light: $pink-light;
+$bg-pink-dark:  $pink-dark;
+
+$bg-teal:       $teal;
+$bg-teal-light: $teal-light;
+$bg-teal-dark:  $teal-dark;
+
+$bg-grey-lightest: $grey-100; // lightest
+$bg-grey-lighter:  $grey-200;
+$bg-grey-light:    $grey-300;
+$bg-grey:          $grey-400;
+$bg-grey-dark:     $grey-500;
+$bg-grey-darker:   $grey-600;
+$bg-grey-darkest:  $grey-700; // darkest
+
+$bg-white:     $white;
+$bg-red:       $red;
+$bg-red-light: $red-light;
+$bg-red-dark:  $red-dark;
+
+
+// Border colours
+
+$border-white: $white;
+
+$border-gold:       $gold;
+$border-gold-light: $gold-light;
+$border-gold-dark:  $gold-dark;
+
+$border-orange:       $orange;
+$border-orange-light: $orange-light;
+$border-orange-dark:  $orange-dark;
+
+$border-pink:       $pink;
+$border-pink-light: $pink-light;
+$border-pink-dark:  $pink-dark;
+
+$border-teal:       $teal;
+$border-teal-light: $teal-light;
+$border-teal-dark:  $teal-dark;
+
+$border-grey-lightest: $grey-100;
+$border-grey-lighter:  $grey-200;
+$border-grey-light:    $grey-300;
+$border-grey:          $grey-400;
+$border-grey-dark:     $grey-500;
+$border-grey-darker:   $grey-600;
+$border-grey-darkest:  $grey-700;
+
+$border-red:   $red;
+$border-green: $green;
+
+
+// Black & White opacity steps
+
+$black-fade-05: rgba($grey-700, 0.05);
+$black-fade-10: rgba($grey-700, 0.1);
+$black-fade-15: rgba($grey-700, 0.15);
+$black-fade-25: rgba($grey-700, 0.25);
+$black-fade-50: rgba($grey-700, 0.5);
+$black-fade-75: rgba($grey-700, 0.75);
+
+$white-fade-05: rgba($white, 0.05);
+$white-fade-10: rgba($white, 0.1);
+$white-fade-15: rgba($white, 0.15);
+$white-fade-25: rgba($white, 0.25);
+$white-fade-50: rgba($white, 0.5);
+$white-fade-75: rgba($white, 0.75);
+
+
+// Text brand colours
+
+$text-gold:      $gold;
+$text-gold-dark: $gold-dark;
+
+$text-orange:      $orange;
+$text-orange-dark: $orange-dark;
+
+$text-pink:      $pink;
+$text-pink-dark: $pink-dark;
+
+$text-teal:      $teal;
+$text-teal-dark: $teal-dark;
+
+
+// Text grey colours
+
+$text-grey-lightest: $grey-100;
+$text-grey-lighter:  $grey-200;
+$text-grey-light:    $grey-300;
+$text-grey:          $grey-400;
+$text-grey-dark:     $grey-500;
+$text-grey-darker:   $grey-600;
+$text-grey-darkest:  $grey-700;
+
+
+// Text system colours
+
+$text-white: $white;
+$text-red-dark: $red-dark;
+$text-green-dark: $green-dark;
+
+
+// Colour
+//
+// Our map of colours for easier looping,
+// Note: greys are not defined here as they vary based on their usage
+// e.g background, borders, text so are defined per usage as needed.
+
+$colour-system-map: (
+	gold: $gold,
+	gold-light: $gold-light,
+	gold-dark: $gold-dark,
+	orange: $orange,
+	orange-light: $orange-light,
+	orange-dark: $orange-dark,
+	pink: $pink,
+	pink-light: $pink-light,
+	pink-dark: $pink-dark,
+	teal: $teal,
+	teal-light: $teal-light,
+	teal-dark: $teal-dark,
+	grey-lightest: $grey-100,
+	grey-lighter: $grey-200,
+	grey-light: $grey-300,
+	grey: $grey-400,
+	grey-dark: $grey-500,
+	grey-darker: $grey-600,
+	grey-darkest: $grey-700,
+	red: $red,
+	red-light: $red-light,
+	green: $green,
+	green-light: $green-light,
+	white: $white,
+	primary: $grey-700,
+);
+
+
+// Black & White opacity steps
+
+$colour-black-fade-map: (
+	25: $black-fade-25,
+	50: $black-fade-50,
+	75: $black-fade-75,
+);
+
+
+$colour-white-fade-map: (
+	25: $white-fade-25,
+	50: $white-fade-50,
+	75: $white-fade-75,
+);

@@ -1,0 +1,57 @@
+// Colour System/
+
+// Base Colours
+
+$white: #fff;
+$black: #000;
+
+
+// Brand
+
+$gold:          #a3915e;
+$gold-light:    #f7f6f0;
+$gold-dark:     #736433;
+
+$orange:        #fe9b62;
+$orange-light:  #ffdccc;
+$orange-dark:   #bd4602;
+
+$pink:          #fd79ad;
+$pink-light:    #fee6f1;
+$pink-dark:     #c12374;
+
+$teal:          #34a9aa;
+$teal-light:    #d5e9e9;
+$teal-dark:     #1b6b69;
+
+
+// Greys
+//
+// Contrast ratios tested using appropriate white or black text
+// placed over each colour to be at least AA compliant (4.5:1).
+
+// The grey colour palette contains seven values from 100 to 700.
+// White and Black sit outside those values.
+// Black text is WCAG AA accessible on colours ranging from 100 to 300.
+// White text is accessible on colours from 400 to 700.
+
+// Black text (#24292e)
+$grey-100: #f4f5f7; // 12.37 AA (pass) / AAA (pass)
+$grey-200: #e9ecf0; // 12.37 AA (pass) / AAA (pass)
+$grey-300: #d1d5da; // 9.94 AA (pass) / AAA (pass)
+$grey-400: #aeb5bc; // 7.07 AA (pass) / AAA (pass)
+// White text (#fff)
+$grey-500: #606870; // 5.65 AA (pass) / AAA (pass)
+$grey-600: #4e545c; // 7.64 AA (pass) / AAA (pass)
+$grey-700: #24292e; // 14.66 AA (pass) / AAA (pass)
+
+
+// Alert Colours
+
+$red:       #dc2626;
+$red-light: #fee2e2;
+$red-dark:  #b91c1c;
+
+$green:       #059669;
+$green-light: #d1fae5;
+$green-dark:  #047857;

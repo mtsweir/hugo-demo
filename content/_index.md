@@ -4,8 +4,5 @@ date: 2022-03-24T10:02:10+13:00
 draft: false
 ---
 
-<p>This is an intro</p>
-
-<div class="container">
-	<p>This is an intro</p>
-</div>
+<h1>This is the homepage</h1>
+<p>This is the homepage</p>

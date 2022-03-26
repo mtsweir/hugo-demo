@@ -1,0 +1,82 @@
+.grid {
+	display: grid;
+}
+
+@each $scale, $size in $grid-cols-map {
+	// Create grid column variants
+	.grid-#{$scale}-col {
+		grid-template-columns: repeat(#{$scale}, minmax(0, 1fr));
+	}
+}
+
+.grid-cols-none { grid-template-columns: none; }
+
+@each $scale, $size in $grid-rows-map {
+	// Create grid row variants
+	.grid-#{$scale}-row {
+		grid-template-rows: repeat(#{$scale}, minmax(0, 1fr));
+	}
+}
+
+.grid-rows-none { grid-template-rows: none; }
+
+@each $scale, $size in $grid-gap-map {
+	// Create grid gap variants
+	.gap-#{$scale} {
+		grid-gap: $size;
+	}
+}
+
+@each $scale, $size in $grid-gap-map {
+	// Create grid column gap variants
+	.gap-x-#{$scale} {
+		grid-column-gap: $size;
+	}
+}
+
+@each $scale, $size in $grid-gap-map {
+	// Create grid row gap variants
+	.gap-y-#{$scale} {
+		grid-row-gap: $size;
+	}
+}
+
+@each $breakpoint, $variant in $responsive-variants-only {
+	@include breakpoint($breakpoint) {
+		.grid-#{&\@}#{$variant} { display: grid; }
+
+		@each $scale, $size in $grid-cols-map {
+			.grid-#{$scale}-col-#{&\@}#{$variant} {
+				grid-template-columns: repeat(#{$scale}, minmax(0, 1fr));
+			}
+		}
+
+		.grid-cols-none-#{&\@}#{$variant} { grid-template-columns: none; }
+
+		@each $scale, $size in $grid-rows-map {
+			.grid-#{$scale}-row-#{&\@}#{$variant} {
+				grid-template-rows: repeat(#{$scale}, minmax(0, 1fr));
+			}
+		}
+
+		.grid-rows-none-#{&\@}#{$variant} { grid-template-rows: none; }
+
+		@each $scale, $size in $grid-gap-map {
+			.gap-#{$scale}-#{&\@}#{$variant} {
+				grid-gap: $size;
+			}
+		}
+
+		@each $scale, $size in $grid-gap-map {
+			.gap-x-#{$scale}-#{&\@}#{$variant} {
+				grid-column-gap: $size;
+			}
+		}
+
+		@each $scale, $size in $grid-gap-map {
+			.gap-y-#{$scale}-#{&\@}#{$variant} {
+				grid-row-gap: $size;
+			}
+		}
+	}
+}

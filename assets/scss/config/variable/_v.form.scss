@@ -1,0 +1,29 @@
+$input-height: 40px;
+$input-x-padding: $spacer-03;
+$input-border-width: 1px;
+$input-border-color: $border-grey-dark;
+$input-background-color: $white;
+$input-border-color-focus: $teal;
+$input-border-color-focus-ring: $teal;
+$input-border-color-focus-check: $teal;
+$input-border-color-hover: $border-grey-darker;
+$input-text-color: $text-grey-darkest;
+$input-text-color-placeholder: $text-grey-darkest;
+
+// Button
+
+$button-font-size: $font-size-compact-02;
+$button-border-width: 2px;
+$button-top-padding: $spacer-02;
+$button-bottom-padding: $spacer-01;
+$button-x-padding: $spacer-04;
+
+
+// Check & Radio
+
+$check-background-color: $white;
+$check-border-color: $input-border-color;
+$check-border-color-hover: $input-border-color-hover;
+$check-border-width: 1px;
+$check-color-checked: $input-border-color-focus;
+$check-size: 16px;

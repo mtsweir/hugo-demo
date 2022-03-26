@@ -1,0 +1,3 @@
+@each $index, $level in $z-level-map {
+	.z-#{$index} { z-index: $level; }
+}

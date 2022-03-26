@@ -1,0 +1,15 @@
+.pf-blog-filter-wrapper {
+	padding: 0;
+	list-style: none;
+
+	> li {
+		> a {
+			color: $text-grey-darkest;
+			font-weight: $font-weight-normal;
+
+			&:hover {
+				color: $text-teal;
+			}
+		}
+	}
+}

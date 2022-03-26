@@ -1,0 +1,49 @@
+$width: (
+	0: $spacer-00,
+	1: $spacer-01,
+	2: $spacer-02,
+	3: $spacer-03,
+	4: $spacer-04,
+	5: $spacer-05,
+	6: $spacer-06,
+	7: $spacer-07,
+	8: $spacer-08,
+	9: $spacer-09,
+	10: $spacer-10,
+	11: $spacer-11,
+	12: $spacer-12,
+	13: $spacer-13,
+	14: $spacer-14,
+	15: $spacer-15,
+);
+
+$width-percent-spacer-map: (
+	one-quarter: 25%,
+	one-third: 33.33333%,
+	one-half: 50%,
+	two-thirds: 66.66667%,
+	three-quarters: 75%,
+	full: 100%,
+);
+
+$max-width-map: (
+	0: 0,
+	none: none,
+	one-quarter: 25%,
+	one-third: 33.33333%,
+	one-half: 50%,
+	two-thirds: 66.66667%,
+	three-quarters: 75%,
+	full: 100%,
+	screen-sm : $width-sm,
+	screen-md: $width-md,
+	screen-lg: $width-lg,
+	screen-xl: $width-xl,
+);
+
+// Example using map-get function
+//
+// .foo {
+// 	width: map-get($width, 11);
+// }
+//

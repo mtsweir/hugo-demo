@@ -1,0 +1,25 @@
+@each $scale, $size in $spacer-map {
+	.w-#{$scale} { width: $size; }
+}
+
+@each $scale, $size in $width-percent-spacer-map {
+	.w-#{$scale} { width: $size; }
+}
+
+.w-screen { width: 100vw; }
+.w-auto { width: auto; }
+
+@each $breakpoint, $variant in $responsive-variants-only {
+	@include breakpoint($breakpoint) {
+		@each $scale, $size in $spacer-map {
+			.w-#{$scale}-#{&\@}#{$variant} { width: $size; }
+		}
+
+		@each $scale, $size in $width-percent-spacer-map {
+			.w-#{$scale}-#{&\@}#{$variant} { width: $size; }
+		}
+
+		.w-screen-#{&\@}#{$variant} { width: 100vw; }
+		.w-auto-#{&\@}#{$variant} { width: auto; }
+	}
+}

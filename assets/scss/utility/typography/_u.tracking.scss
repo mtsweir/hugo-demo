@@ -1,0 +1,15 @@
+@each $tracking, $size in $letter-spacing-map {
+	.tracking-#{$tracking} {
+		letter-spacing: $size;
+	}
+}
+
+@each $breakpoint, $variant in $responsive-variants-only {
+	@include breakpoint($breakpoint) {
+		@each $tracking, $size in $letter-spacing-map {
+			.tracking-#{$tracking}-#{&\@}#{$variant} {
+				letter-spacing: $size;
+			}
+		}
+	}
+}

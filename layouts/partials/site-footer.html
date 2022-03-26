@@ -1,0 +1,125 @@
+<div class="bg-grey-lightest">
+	<div class="pt-8 pb-7 pf-container">
+		<div class="grid gap-x-5 gap-y-4 gap-x-7-@md grid-1-col grid-3-col-@sm grid-5-col-@lg">
+			<section>
+				<h2 class="mt-0 mb-4 text-grey-600 text-compact-02 pf-heading">Products</h2>
+				<ul class="list-none ma-0 pl-0 grid grid-2-col grid-1-col-@sm gap-x-3 gap-x-0-@sm text-compact-02">
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">Collections</a>
+					</li>
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">Infusions</a>
+					</li>
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">Ingredients</a>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2 class="mt-0 mb-4 text-grey-600 text-compact-02 pf-heading">Shop Online</h2>
+				<ul class="list-none ma-0 pl-0 grid grid-2-col grid-1-col-@sm gap-x-3 gap-x-0-@sm text-compact-02">
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">Australia</a>
+					</li>
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">New Zealand</a>
+					</li>
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">United States</a>
+					</li>
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">Fiji</a>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2 class="mt-0 mb-4 text-grey-600 text-compact-02 pf-heading">Store/Spa Locator</h2>
+				<ul class="list-none ma-0 pl-0 grid grid-2-col grid-1-col-@sm gap-x-3 gap-x-0-@sm text-compact-02">
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">Australia</a>
+					</li>
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">New Zealand</a>
+					</li>
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">United States</a>
+					</li>
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">Fiji</a>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2 class="mt-0 mb-4 text-grey-600 text-compact-02 pf-heading">About</h2>
+				<ul class="list-none ma-0 pl-0 grid grid-2-col grid-1-col-@sm gap-x-3 gap-x-0-@sm text-compact-02">
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">Our Story</a>
+					</li>
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">Blog</a>
+					</li>
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">Spa Professionals</a>
+					</li>
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">Contact</a>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2 class="mt-0 mb-4 text-grey-600 text-compact-02 pf-heading">Social</h2>
+				<ul class="list-none ma-0 pl-0 grid grid-2-col grid-1-col-@sm gap-x-3 gap-x-0-@sm text-compact-02">
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">Facebook</a>
+					</li>
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">Instagram</a>
+					</li>
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">Pinterest</a>
+					</li>
+					<li>
+						<a href="#" class="text-grey-darkest underline-hover">Twitter</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+</div>
+
+<div class="px-5 py-5 py-8-@md">
+	<div class="grid gap-x-4 gap-y-5 grid-2-col grid-3-col-@sm grid-6-col-@lg">
+		<div>
+			{{ $image := resources.Get "/img/logo/vendor/greenearth-logo.jpg" }}
+			<img src="{{ $image.RelPermalink }}" width="283" height="107" alt="Green Earth">
+		</div>
+		<div>
+			{{ $image := resources.Get "/img/logo/vendor/truepacific-logo.jpg" }}
+			<img src="{{ $image.RelPermalink }}" width="283" height="107" alt="True Pacific">
+		</div>
+		<div>
+			{{ $image := resources.Get "/img/logo/vendor/organic-logo.jpg" }}
+			<img src="{{ $image.RelPermalink }}" width="283" height="107" alt="Organic Nut Oils">
+		</div>
+		<div>
+			{{ $image := resources.Get "/img/logo/vendor/treeol-logo.jpg" }}
+			<img src="{{ $image.RelPermalink }}" width="283" height="107" alt="Coconut tree of life">
+		</div>
+		<div>
+			{{ $image := resources.Get "/img/logo/vendor/wilderafted-logo.jpg" }}
+    	<img src="{{ $image.RelPermalink }}" width="283" height="107" alt="Well Crafted">
+		</div>
+		<div>
+			{{ $image := resources.Get "/img/logo/vendor/greywater-logo.jpg" }}
+    	<img src="{{ $image.RelPermalink }}" width="283" height="107" alt="Greywater Safe">
+		</div>
+	</div>
+</div>
+
+<div class="pf-container pb-5 text-center text-compact-01 text-grey-dark">
+	Copyright &copy; <span id="js-year"><noscript>{{ now.Format "2006" }}</noscript></span> {{ with .Site.Copyright }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}
+</div>
