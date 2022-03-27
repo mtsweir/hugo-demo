@@ -5,7 +5,6 @@
 }
 
 @mixin typeMarketing {
-	font-weight: $font-weight-semibold;
+	font-weight: $font-weight-bold;
 	letter-spacing: $heading-ls;
-	line-height: $display-lh;
 }

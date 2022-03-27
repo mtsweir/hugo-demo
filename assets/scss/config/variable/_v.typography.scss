@@ -11,13 +11,14 @@ $font-size-body-05: 1.75rem;  // 28px
 $font-size-body-06: 2rem;     // 32px
 $font-size-body-07: 2.5rem;   // 40px
 
-$font-size-mktg-06: 1.75rem; // 28px
-$font-size-mktg-05: 2rem;    // 32px
-$font-size-mktg-04: 2.5rem;  // 40px
-$font-size-mktg-03: 3rem;    // 48px
-$font-size-mktg-02: 3.5rem;  // 56px
-$font-size-mktg-01: 4rem;    // 64px
-$font-size-mktg-00: 4.5rem;  // 72px
+$font-size-mktg-01: 1.5rem;   // 24px
+$font-size-mktg-02: 1.75rem;  // 28px
+$font-size-mktg-03: 2rem;     // 32px
+$font-size-mktg-04: 2.5rem;   // 40px
+$font-size-mktg-05: 3rem;     // 48px
+$font-size-mktg-06: 3.5rem;   // 56px
+$font-size-mktg-07: 4rem;     // 64px
+$font-size-mktg-08: 4.5rem;   // 72px
 
 
 // Font weight scale
@@ -88,13 +89,13 @@ $heading-font-map: (
 
 
 $marketing-font-map: (
-	0: $font-size-mktg-03,
-	1: $font-size-mktg-04,
-	2: $font-size-mktg-05,
-	3: $font-size-mktg-06,
-	4: $font-size-body-04,
-	5: $font-size-body-03,
-	6: $font-size-body-01,
+	mktg-00: $font-size-mktg-03,
+	mktg-01: $font-size-mktg-04,
+	mktg-02: $font-size-mktg-05,
+	mktg-03: $font-size-mktg-06,
+	mktg-04: $font-size-body-04,
+	mktg-05: $font-size-body-03,
+	mktg-06: $font-size-body-01,
 );
 
 

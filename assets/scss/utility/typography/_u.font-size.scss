@@ -12,14 +12,6 @@
 	}
 }
 
-@each $scale, $size in $marketing-font-map {
-	.text-#{$scale} {
-		font-size: $size;
-
-		@include typeMarketing;
-	}
-}
-
 @each $breakpoint, $variant in $responsive-variants-only {
 	@include breakpoint($breakpoint) {
 		@each $scale, $size in $compact-font-map {
@@ -70,20 +62,81 @@
 
 // Marketing typography
 
-@each $scale, $size in $marketing-font-map {
-	.h#{$scale}-mktg {
-		font-size: $size;
+.h0-mktg {
+	font-size: $font-size-mktg-05;
+	line-height: 52px;
+	@include typeMarketing;
+}
 
-		@include typeMarketing;
-	}
+.h1-mktg {
+	font-size: $font-size-mktg-04;
+	line-height: 44px;
+	@include typeMarketing;
+}
+
+.h2-mktg {
+	font-size: $font-size-mktg-03;
+	line-height: 36px;
+	@include typeMarketing;
+}
+
+.h3-mktg {
+	font-size: $font-size-mktg-02;
+	line-height: 32px;
+	@include typeMarketing;
+}
+
+.h4-mktg {
+	font-size: $font-size-mktg-01;
+	line-height: 28px;
+	@include typeMarketing;
+}
+
+.h5-mktg {
+	font-size: $font-size-body-03;
+	line-height: 24px;
+	@include typeMarketing;
+}
+
+.h6-mktg {
+	font-size: $font-size-body-01;
+	line-height: 20px;
+	@include typeMarketing;
 }
 
 @include bp($width-md, 'min') {
-	.h0-mktg { font-size: $font-size-mktg-00; }
-	.h1-mktg { font-size: $font-size-mktg-02; }
-	.h2-mktg { font-size: $font-size-mktg-03; }
-	.h3-mktg { font-size: $font-size-mktg-04; }
-	.h4-mktg { font-size: $font-size-mktg-06; }
-	.h5-mktg { font-size: $font-size-body-04; }
-	.h6-mktg { font-size: $font-size-body-03; }
+	.h0-mktg {
+		font-size: $font-size-mktg-08;
+		line-height: 76px;
+	}
+
+	.h1-mktg {
+		font-size: $font-size-mktg-06;
+		line-height: 60px;
+	}
+
+	.h2-mktg {
+		font-size: $font-size-mktg-05;
+		line-height: 52px;
+	}
+
+	.h3-mktg {
+		font-size: $font-size-mktg-04;
+		line-height: 44px;
+	}
+
+	.h4-mktg {
+		font-size: $font-size-mktg-02;
+		line-height: 32px;
+	}
+
+	.h5-mktg {
+		font-size: $font-size-mktg-01;
+		line-height: 28px;
+	}
+
+	.h5-mktg {
+		font-size: $font-size-body-03;
+		line-height: 24px;
+	}
 }
