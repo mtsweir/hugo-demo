@@ -6,14 +6,16 @@ status: Stable
 intro: Badges are for showing a product highlight. They're ideal for getting a user's attention.
 ---
 
-<span class="pf-badge pf-badge-new" aria-label="New"></span>
-<span class="pf-badge pf-badge-sale" aria-label="Sale"></span>
-<span class="pf-badge pf-badge-fav pf-badge-icon" aria-label="Staff Pick">
-	<svg class="pf-icon">
-		<use xlink:href="#icon-heart"></use>
-	</svg>
-</span>
-<span class="pf-badge pf-badge-promo pf-badge-secondary" aria-label="Promo"></span>
+<div>
+	<span class="pf-badge pf-badge-new" aria-label="New"></span>
+	<span class="pf-badge pf-badge-sale" aria-label="Sale"></span>
+	<span class="pf-badge pf-badge-fav pf-badge-icon" aria-label="Staff Pick">
+		<svg class="pf-icon">
+			<use xlink:href="#icon-heart"></use>
+		</svg>
+	</span>
+	<span class="pf-badge pf-badge-promo pf-badge-secondary" aria-label="Promo"></span>
+</div>
 
 <script type="text/plain" class="language-markup">
 <span class="pf-badge pf-badge-new" aria-label="New"></span>
