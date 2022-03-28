@@ -2,14 +2,27 @@
 <html lang="{{ .Site.LanguageCode }}">
 <head>
 	{{ partial "head" . }}
+	{{ partial "head-plugin-prism" . }}
 </head>
 <body>
 	{{ partial "site-icons" . }}
 
 	<main>
-		{{ block "main" . }}{{ end }}
+		<div class="my-10 mx-auto px-4 max-w-screen-md h-screen-10">
+			<section class="mb-10">
+				<h1 class="mb-6 h2-mktg">{{ .Title }}</h1>
+				<dl class="flex gap-2 mt-4 text-compact-02">
+					<dt>Component status</dt>
+					<dd><b>{{ .Params.status }}</b></dd>
+				</dl>
+				<p>{{ .Params.intro }}</p>
+			</section>
+
+			{{ block "main" . }}{{ end }}
+		</div>
 	</main>
 
 	{{ partial "site-footer-script" . }}
+	{{ partial "site-footer-plugin-prism" . }}
 </body>
 </html>
