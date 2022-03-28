@@ -15,7 +15,7 @@
 	white-space: nowrap;
 
 	&::before {
-		content: attr(data-label);
+		content: attr(aria-label);
 	}
 
 	&.pf-badge-new {
