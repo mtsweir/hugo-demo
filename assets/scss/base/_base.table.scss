@@ -9,6 +9,7 @@ table {
 	td {
 		padding: $spacer-03 $spacer-03 $spacer-03 0;
 		text-align: left;
+		vertical-align: top;
 
 		> :first-child,
 		> :first-child > :first-child {

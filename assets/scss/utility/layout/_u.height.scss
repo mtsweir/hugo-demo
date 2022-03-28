@@ -13,13 +13,3 @@
 		}
 	}
 }
-
-@each $breakpoint, $variant in $responsive-variants {
-	@include breakpoint($breakpoint) {
-		@each $scale, $size in $screen-height-map {
-			.h-screen-#{$scale}-#{&\@}#{$variant} {
-				height: $size;
-			}
-		}
-	}
-}
