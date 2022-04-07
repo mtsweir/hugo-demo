@@ -1,0 +1,46 @@
+@import "../config/";
+
+.doc-example {
+	padding: $spacer-07;
+	border: 1px solid $border-grey-lighter;
+	@include child-margin;
+}
+
+.docs-sidebar {
+	flex: 0 1 320px;
+}
+
+.docs-toc-nav {
+	position: sticky;
+	top: 4rem;
+	height: calc(100vh - 4rem);
+	overflow-y: auto;
+
+	nav {
+		> ul {
+			padding: 0;
+
+			ul {
+				margin-top: $spacer-01;
+			}
+		}
+
+		ul {
+			margin: 0;
+			list-style: none;
+		}
+
+		a {
+			color: $text-grey-darkest;
+		}
+	}
+}
+
+code {
+	color: #d63384;
+	font-family: $body-font-mono;
+	font-size: .875em;
+	word-wrap: break-word;
+	direction: ltr;
+	unicode-bidi: bidi-override;
+}

@@ -1,9 +1,15 @@
+@import "../config/";
+
+.code-toolbar {
+	margin-bottom: $spacer-09;
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
 	color: black;
 	background: none;
 	text-shadow: 0 1px white;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: $body-font-mono;
 	font-size: 0.875rem;
 	text-align: left;
 	white-space: pre;
@@ -11,14 +17,7 @@ pre[class*="language-"] {
 	word-break: normal;
 	word-wrap: normal;
 	line-height: 1.5;
-
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
-
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
+	tab-size: 2;
 	hyphens: none;
 }
 
@@ -44,7 +43,7 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 /* Code blocks */
 pre[class*="language-"] {
 	padding: 1rem;
-	margin: 60px 0;
+	margin: 0;
 	overflow: auto;
 }
 
