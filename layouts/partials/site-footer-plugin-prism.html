@@ -1,3 +1,9 @@
-{{ $global := resources.Get "js/prism.js" }}
-{{ $js := $global }}
-<script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
+{{- /* Prism JS */ -}}
+{{- /* production options */ -}}
+{{- $opts := dict "minify" true -}}
+{{- /* development options */ -}}
+{{- if eq hugo.Environment "development" -}}
+{{- $opts = dict "sourceMap" "inline" -}}
+{{- end -}}
+{{- $built := resources.Get "js/prism.js" | js.Build $opts }}
+<script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>

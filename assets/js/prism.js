@@ -1,5 +1,7 @@
-/* PrismJS 1.27.0
-https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript&plugins=unescaped-markup+toolbar+copy-to-clipboard */
+/* **********************************************
+     PrismJS 1.27.0 prism.js
+********************************************** */
+
 /// <reference lib="WebWorker"/>
 
 var _self = (typeof window !== 'undefined')
