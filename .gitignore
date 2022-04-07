@@ -1,6 +1,5 @@
 # Files
 .hugo_build.lock
-package-lock.json
 
 # Directories
 node_modules/
