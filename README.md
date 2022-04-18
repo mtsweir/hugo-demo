@@ -1,3 +1,8 @@
+## Hugo
+
+Update the "otherDependencies: hugo" version number to the latest release before npm install:
+https://github.com/gohugoio/hugo/releases
+
 ## Third-party
 
 Prism (Source code highlighter)
